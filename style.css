@@ -1,0 +1,137 @@
+body {
+  font-family: 'Lato';
+  background-color: black;
+  animation: welcome 2s;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  outline-width: 10px;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(69, 0, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.topnav {
+  position: fixed;
+  background-color: #111;
+  overflow: hidden;
+  height: 25px;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 20px;
+  animation: welcome 2s;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: left;
+}
+
+#time {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 49%;
+}
+
+@keyframes welcome {
+  0% {opacity: 0;}
+  20% {opacity: 0;}
+  100% {opacity: 100%;}
+}
+
+textarea {
+  position: fixed;
+  background-color: black;
+  color: white;
+  font-size: xx-large;
+  padding: 20px;
+  border: 0px;
+  width: 85%;
+  padding-top: 70px;
+  padding-left: 200px;
+  height: 90%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top: 45px;
+}
+
+.sidenav a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.5s all;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+  transform: scale(111%);
+  transition: 0.2s all;
+}
+
+.sidenav a:active{
+  transform: scale(90%);
+  color: black;
+  transition: 0.2s all;
+}
+
+text {
+  color: white;
+  padding: 10px;
+}
+
+input {
+  display: none;
+}
+
+.upload {
+  cursor: pointer;
+}
