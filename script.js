@@ -39,7 +39,10 @@ function SelectAll(){
 }
 
 function Paste(){
-  document.getElementById("edittext").value += navigator.clipboard.readText;
+  navigator.clipboard.readText()
+  .then(pasted => {
+    document.getElementById("edittext").value += pasted;
+  })
 }
 
 function Save(){
