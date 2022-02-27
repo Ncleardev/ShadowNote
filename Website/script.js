@@ -3,9 +3,12 @@ function Time() {
   setTimeout(Time, 1000);
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 window.addEventListener('beforeunload', function (e) {
-  e.preventDefault();
-  e.returnValue = '1';
+  localStorage.save = document.getElementById("edittext").value;
 });
 
 function Copy() {
@@ -45,10 +48,17 @@ function Paste(){
   })
 }
 
-function Save(){
+function Export(){
   var hiddenElement = document.createElement('a');
   hiddenElement.href = 'data:attachment/text,' + encodeURI(document.getElementById("edittext").value);
   hiddenElement.target = '_blank';
   hiddenElement.download = 'Text.txt';
   hiddenElement.click();
+}
+
+function Auto() {
+  document.getElementById("edittext").value = localStorage.save;
+  if (document.getElementById("edittext").value == "undefined") {
+    document.getElementById("edittext").value = "Hello World!"
+  }
 }

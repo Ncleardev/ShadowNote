@@ -3,19 +3,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS">
-    <title>ShadowNote - The fastest way to take notes.</title>
+    <title>ShadowNote</title>
     <link href="style.css" rel="stylesheet">
     <link rel = "icon" href = "ico.png"> 
   </head>
-  <body onload="Time()">
+  <body onload="Time(), Auto()">
     <script src="script.js"></script>
-    <textarea type="text" id="edittext">Hello World!</textarea>
+    <textarea type="text" id="edittext"></textarea>
     <div class="topnav">
       <text id="Menu>"></text>
       <text id="time"></text>
     </div>
     <div class="sidenav">
-      <a href="https://github.com/Ncleardev/ShadowNote" target="_blank">ShadowNote</a>
+      <a href="https://github.com/Ncleardev/ShadowNote" target="_blank" id="info">ShadowNote</a>
       <a href="javascript:void(0)" onclick="Copy();">Copy</a>
       <a href="javascript:void(0)" onclick="Cut();">Cut</a>
       <a href="javascript:void(0)" onclick="Paste();">Paste</a>
@@ -23,7 +23,7 @@
       <a href="javascript:void(0)" onclick="Undo();">Undo</a>
       <a href="javascript:void(0)" onclick="Redo();">Redo</a>
       <label for="inputfile">
-        <a class="upload">Upload</a>
+        <a class="upload">Import</a>
       </label>
       <input type="file" name="inputfile" id="inputfile">
       <script type="text/javascript">
@@ -38,7 +38,7 @@
               fr.readAsText(this.files[0]);
           })
       </script>
-      <a href="javascript:void(0)" onclick="Save();">Save</a>
+      <a href="javascript:void(0)" onclick="Export();">Export</a>
       <a href="javascript:void(0)" onclick="Delete();">Delete</a>
       <a href="javascript:void(0)" onclick="Translate();">Translate</a>
     </div>
